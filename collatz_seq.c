@@ -33,6 +33,8 @@ int main(void)
   int maxseqnumber = 0;
   int maxrationumber = 0;
 
+  int maxratiostoppingtime = 0;
+
   float maxstoppingratio = 0.0;
   float stoppingratio = 0.0;
 
@@ -56,6 +58,7 @@ int main(void)
     {
       maxstoppingratio = stoppingratio;
       maxrationumber = i;
+      maxratiostoppingtime = stoppingtime;
 
     //printf ("[CUR_MAX_RATIO] %d has a max ratio of %2lf\n", maxrationumber, maxstoppingratio);
     }
@@ -63,7 +66,7 @@ int main(void)
 
   printf ("[MAX_STOPPING TIME] %d has a stopping time of %d\n", maxseqnumber, maxstoppingtime);
 
-  printf ("[MAX_RATIO] %d has a max ratio of %2lf\n",  maxrationumber, maxstoppingratio);
+  printf ("[MAX_RATIO] %d has a stopping time of %d with a max ratio of %2lf\n",  maxrationumber, maxratiostoppingtime, maxstoppingratio);
 }
 
 
